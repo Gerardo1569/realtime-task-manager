@@ -1,0 +1,55 @@
+
+<form [formGroup]="UserForm" (ngSubmit)="submitCita()" >
+
+
+ <!-- Nombre -->
+  <div>
+    <label for="nombre">Nombre</label>
+    <input id="nombre" type="text" formControlName="nombre" />
+
+    <!-- Validaciones -->
+    <div *ngIf="campoInvalido('nombre')">
+      <small *ngIf="UserForm.get('nombre')?.errors?.['required']">
+        El nombre es obligatorio
+      </small>
+      <small *ngIf="UserForm.get('nombre')?.errors?.['minlength']">
+        Mínimo 3 caracteres
+      </small>
+    </div>
+  </div>
+
+  <div>
+    <label for="correo">Email</label>
+    <input id="correo" type="text" formControlName="correo" />
+
+    <!-- Validaciones -->
+    <div *ngIf="campoInvalido('correo')">
+      <small *ngIf="UserForm.get('correo')?.errors?.['required']">
+        El correo es obligatorio
+      </small>
+     
+    </div>
+  </div>
+
+    <div>
+    <label for="password">Password</label>
+    <input id="password" type="text" formControlName="password" />
+
+    <!-- Validaciones -->
+    <div *ngIf="campoInvalido('password')">
+      <small *ngIf="UserForm.get('password')?.errors?.['required']">
+        La contraseña es obligatorio
+      </small>
+      <small *ngIf="UserForm.get('password')?.errors?.['password']">
+        Mínimo 4 caracteres
+      </small>
+     
+    </div>
+  </div>
+
+
+
+
+  <button type="submit"> Guardar </button>
+
+</form>
