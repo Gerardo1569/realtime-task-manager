@@ -30,6 +30,35 @@ export class UserList  implements OnInit {
       }
 
     }
+
+    async deleteUser(id:string){
+      try{
+        console.log(id);
+        this.userService.deleteUser(id);
+        //mandar solicitud de eliminar por id
+        //mostrar elemento eliminado en pantalla
+      }
+      catch(error){
+        console.error(error);
+
+      }
+
+    }
+    
+    async updateUser(user:any){
+      try{
+        console.log(user._id);
+        this.userService.updateUser(user._id,user);
+        console.log("usuario acutuializado");
+        //mandar solicitud de eliminar por id
+        //mostrar elemento eliminado en pantalla
+      }
+      catch(error){
+        console.error(error);
+
+      }
+
+    }
     
 
 

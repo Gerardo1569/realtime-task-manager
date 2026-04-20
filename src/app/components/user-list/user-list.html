@@ -17,6 +17,8 @@
         <td>{{ user._id }}</td>
         <td>{{ user.name }}</td>
         <td>{{ user.email }}</td>
+        <td><button (click)="deleteUser(user._id)" >Eliminar</button></td>
+        <td><button (click)="updateUser(user)"> Update </button> </td>
       </tr>
     </tbody>
   </table>
