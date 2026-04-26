@@ -4,7 +4,7 @@
 
  <!-- Nombre -->
   <div>
-    <label for="nombre">Nombre</label>
+    <label for="nombre">Nombre de la tarea</label>
     <input id="nombre" type="text" formControlName="nombre" />
 
     <!-- Validaciones -->
@@ -19,32 +19,24 @@
   </div>
 
   <div>
-    <label for="correo">Email</label>
+    <label for="correo">Descripción</label>
     <input id="correo" type="text" formControlName="correo" />
 
     <!-- Validaciones -->
     <div *ngIf="campoInvalido('correo')">
       <small *ngIf="UserForm.get('correo')?.errors?.['required']">
-        El correo es obligatorio
+        La Descripción es obligatorio
       </small>
      
     </div>
   </div>
 
     <div>
-    <label for="password">Password</label>
-    <input id="password" type="text" formControlName="password" />
+    <label for="password">Fecha</label>
+    <input id="password" type="date" formControlName="password" />
 
     <!-- Validaciones -->
-    <div *ngIf="campoInvalido('password')">
-      <small *ngIf="UserForm.get('password')?.errors?.['required']">
-        La contraseña es obligatorio
-      </small>
-      <small *ngIf="UserForm.get('password')?.errors?.['password']">
-        Mínimo 4 caracteres
-      </small>
-     
-    </div>
+  
   </div>
 
 

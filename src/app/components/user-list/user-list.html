@@ -1,5 +1,5 @@
 <div>
-  <h2>Usuarios registrados</h2>
+  <h2>Lista de tareas</h2>
   
   <p *ngIf="loading">Cargando usuarios...</p>
 
@@ -8,7 +8,13 @@
       <tr>
         <th>ID</th>
         <th>Nombre</th>
-        <th>Email</th>
+        <th>Descripción</th>
+        <th>Acción</th>
+        <th>Nuevo Nombre</th>
+        <th>Nueva Desc.</th>
+        <th>Acción</th>
+        
+        
       </tr>
     </thead>
 
@@ -18,9 +24,20 @@
         <td>{{ user.name }}</td>
         <td>{{ user.email }}</td>
         <td><button (click)="deleteUser(user._id)" >Eliminar</button></td>
-        <td><button (click)="updateUser(user)"> Update </button> </td>
+
+        <td>
+  <input [(ngModel)]="user.name">
+</td>
+<td>
+  <input [(ngModel)]="user.email">
+</td>
+<td>
+  <button (click)="updateUser(user)">Actualizar</button>
+</td>
       </tr>
     </tbody>
+
+    
   </table>
 
   <p *ngIf="!loading && users.length === 0">
