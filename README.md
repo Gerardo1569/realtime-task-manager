@@ -1,9 +1,8 @@
-correr el servidor backend para conectar con mongo db
+Este proyecto es una aplicación de gestión de tareas en tiempo real desarrollada utilizando sockets para la comunicación entre cliente y servidor. Su objetivo principal es explorar y poner en práctica tecnologías de comunicación en tiempo real, permitiendo la sincronización instantánea de tareas entre múltiples clientes conectados.
 
+This project is a real-time task management application built using sockets for client-server communication. Its main purpose is to explore and experiment with real-time communication technologies, enabling instant task synchronization between multiple connected clients.
 
 # UserManagerApp
-
-
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.4.
 
